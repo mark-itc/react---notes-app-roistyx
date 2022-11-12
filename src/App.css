@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+}
+
+.top-section {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-size: 20px 20px;
+  background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7);
+}
+
+h1 {
+  font-size:2rem;
+  background-color: white;
+  font-family: 'Sono', sans-serif;
+    
+}
+
+textarea {
+  font-size: 1.4rem;
+  width: 400px;
+  height: 200px;
+  overflow: scroll;
+  resize: none;
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+
+button {
+  font-family: 'Sono', sans-serif;
+  padding: 5px 15px;
+  margin: 5px;
+  width: 40px;
+  min-width: 100px;
+  font-weight: bold;
+}
+
+.main-content {
+  padding: 20px;
+  text-align: center;
+  margin:auto;
+  width: 40%
+  
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-group .input-control {
+  flex: 1 1 auto;
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 8px;
+  padding: 20px;
+  margin-top: -4px;
+}
+
+.flex-container {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 2px solid #CCCCCC;
+  max-width: 100vw;
+  margin: 0 auto;
+  height: 80vh;
+  display: flex;
+  flex-flow: row wrap; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow:scroll
+}
+
+.flex-row {
+  background-color: orange;
+  height: auto;
+  width: 31%;
+  min-height: 200px;
+  margin: 1%;
+  padding: 10px;
+  height: 300px;
+  overflow: scroll;
+  border: 1px solid gray;
+  border-radius: 8px;
+  }
+
+  .note-time {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  .note-content {
+    border-top: 1px dashed gray;
+    padding: 17px;
+    font-size: 1.2rem
+  }
+
+
