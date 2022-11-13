@@ -1,18 +1,21 @@
 import React from 'react'
-import '../App.css';
 
-function Note({ note }) {
-    const {name, date} = note
-    
+function Note({note, checkToDelete} ) {
+
+    function handleNoteClick() {
+        checkToDelete(note.key)
+        console.log(note.key)
+      }
+   
     return ( 
     <div className="flex-row">
+        <input type="checkbox" onChange={handleNoteClick} checked={note.toDelete}/>
         <div className="note-time"> 
-            {date}
+            {note.date}
         </div> 
         <div className="note-content">
-            {name}
+            {note.name}
         </div>
-        
     </div>
   )
 }
