@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
 
 * {
@@ -7,6 +7,7 @@
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   color: #333333;
+  padding: 0
 }
 
 .top-section {
@@ -16,16 +17,26 @@
   background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7);
 }
 
-h1 {
+.headline-span {
   font-size:2rem;
+  display: inline-block;
   background-color: white;
   font-family: 'Sono', sans-serif;
+  margin-bottom: 10px;
+  padding: 5px 15px;
+  color: black;
+  font-weight: 900;
+
     
 }
 
+.checkbox {
+  height: 20px;
+  width: 20px;
+  }
+
 textarea {
   font-size: 1.4rem;
-  width: 400px;
   height: 200px;
   overflow: scroll;
   resize: none;
@@ -46,13 +57,13 @@ button {
   padding: 20px;
   text-align: center;
   margin:auto;
-  width: 40%
+  width: 40vw
   
 }
 
 .form-group {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .form-group .input-control {
@@ -60,8 +71,10 @@ button {
   display: block;
   margin-bottom: 10px;
   margin-right: 8px;
-  padding: 20px;
+  padding: 10px;
   margin-top: -4px;
+  border: 1px solid gray;
+  border-radius: 8px;
 }
 
 .flex-container {

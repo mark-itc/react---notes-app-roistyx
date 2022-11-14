@@ -5,6 +5,7 @@ import NotesList from './components/NotesList'
 function App() {
   const [notes, setNotes] = useState([])
   const noteRefText = useRef()
+  const titleRefText = useRef("Subject")
 
   function checkToDelete(key) {
     const newNotes = [...notes]
@@ -17,13 +18,16 @@ function App() {
   }
   
   function handleAddNote () {
+    const title = titleRefText.current.value
     const name = noteRefText.current.value
     const dateToFormat = new Date().toString()
+    console.log("this is a subject", title)
 
     if (name === "") return
     setNotes(prevNote => {
-        return [...prevNote, {key: name, name: name, date: dateToFormat, toDelete: false}]
+        return [...prevNote, {key: name, name: name, date: dateToFormat, title: title, toDelete: false}]
     })
+    titleRefText.current.value = null
     noteRefText.current.value = null
   }
     
@@ -31,9 +35,12 @@ function App() {
     <>
       <div className="top-section">
         <div className="main-content">
-          <h1>My Notes</h1>
+          <span className="headline-span" >My Notes</span>
+          <div className="form-group" >
+          </div>
             <div className="form-group">
-              <textarea ref={noteRefText}className="input-control"         type="textarea"/>
+              <input ref={titleRefText} placeholder="Title (optional)" className="input-control"/>
+              <textarea ref={noteRefText} placeholder="Body" className="input-control"/>
             </div> 
           <button 
             onClick={handleAddNote} className="input-control">
